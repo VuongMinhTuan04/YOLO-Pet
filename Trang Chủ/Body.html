@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<div class="row" style="height: 508px;">
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item" ng-repeat="slide in slides track by $index" ng-class="{ 'active': $index === currentIndex }">
+                    <img ng-src="{{slide.image}}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div class="card" style="margin-top: 50px;">
+    <div class="card-header">
+        <h1 class="uppercase">YOLO PET SHOP® – CỬA HÀNG THÚ CƯNG, CHÓ MÈO UY TÍN TỪ 2012</h1>
+    </div>
+    <div class="card-body img-body-1">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4" style="align-items: center;">
+                    <a href="#"><img src="/image/mua-thuc-an-cho-cho-tai-yolo-pet-shop.webp" alt=""></a>
+                </div>
+                <div class="col-sm-4" style="align-items: center;">
+                    <a href="#"><img src="/image/mua-thuc-an-cho-meo-tai-yolo-pet-shop.webp" alt=""></a>
+                </div>
+                <div class="col-sm-4" style="align-items: center;">
+                    <a href="#"><img src="/image/hoc-hoi-kien-thuc-cham-soc-thu-cung-yolo.webp" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-18 row" style="padding: 20px; background-color: rgb(255, 215, 93);margin-top: 80px;">
+    <div class="col-sm-6">
+        <img src="/image/do-cong-nghe-cho-thu-cung-tai-yolo.webp" alt="" style="width: 600px;">
+    </div>
+    <div class="col-sm-6" style="margin-top: 90px; font-size: 21px;">
+        <h2>PHỤ KIỆN CÔNG NGHỆ DÀNH CHO THÚ CƯNG</h2>
+        <p>YOLO Pet Shop là công ty chuyên phân phối các sản phẩm đồ chơi, phụ kiện công nghệ 4.0 dành cho thú cưng chính hãng tại Việt Nam.</p>
+        <p>Với các thương hiệu nổi bật như: Petkit, Petree, Meet, Catlink…</p>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 100px;">
+    <div class="row col-lg-30">
+        <div class="col-sm-3" style="text-align: center; align-items: center; justify-content: center; display: flex;">
+            <h3>THƯƠNG HIỆU UY TÍN:</h3>
+        </div>
+
+        <div class="col-sm-9 row thuong-hieu" style="text-align: center; align-items: center; justify-content: center; display: flex;">
+            <div class="col-4" style="width: 260px;">
+                <img src="/image/pet-town-logo.webp" alt="">
+            </div>
+            <div class="col-2">
+                <img src="/image/yolo-pet-shop-tren-shopee.webp" alt="">
+            </div>
+            <div class="col-2" style="width: 110px;">
+                <img src="/image/mizuho-logo.webp" alt="">
+            </div>
+            <div class="col-2">
+                <img src="/image/meo-than-tai-nekko.webp" alt="">
+            </div>
+            <div class="col-3" style="margin-left: 24px;">
+                <img src="/image/mew-pet-shop-logo.webp" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-13 row" style="margin-top: 80px;">
+    <div class="col-sm-4">
+        <h5 style="border-bottom: 4px solid gray; text-align: center;">THÔNG TIN</h5>
+
+        <ul style="padding: 0; font-size: 18px;">
+            <li><strong>Hotline mua hàng:</strong>
+                <a href="tel:0359567792">
+                    <span data-text-color="primary"><strong>035.9567.792</strong></span>
+                </a> (Zalo/Momo/Sacombank)
+            </li>
+            <br>
+            <li><strong>Cửa hàng:</strong> 124 Phan Đình Phùng, Phường 2, Quận Phú Nhuận, TpHCM</li>
+            <br>
+            <li><strong>Giờ mở cửa:</strong> 8h30 – 21h30 (Thứ 2 – Thứ 7) | 9h – 21h (Chủ Nhật)</li>
+            <br>
+            <li><strong>Văn phòng:</strong> Tòa nhà Golden Mansion – 119 Phổ Quang, Phường 9, Quận Phú Nhuận, TpHCM</li>
+            <br>
+            <li><strong>Email:</strong> vuongtuan1357@gmail.com</li>
+        </ul>
+
+        <!--Icon-->
+        <div class="row col-sm-10" style="margin-top: 35px;">
+            <div class="icons-footer1" style="margin-left: 10px;">
+                <a href="https://www.facebook.com/yolopetshop/" target="_blank" data-label="Facebook" aria-label="Follow on Facebook" rel="noopener nofollow">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+
+            <div class="icons-footer2" style="margin-left: 10px;">
+                <a href="https://www.instagram.com/yolo.coltd" target="_blank" data-label="Instagram" aria-label="Follow on Instagram" rel="noopener nofollow">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="icons-footer3" style="margin-left: 10px;">
+                <a href="https://twitter.com/yolopetshop" target="_blank" data-label="Twitter" aria-label="Follow on Twitter" rel="noopener nofollow">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+
+            <div class="icons-footer4" style="margin-left: 10px;">
+                <a href="https://www.pinterest.com/yolopetshop/" target="_blank" data-label="Pinterest" aria-label="Follow on Pinterest" rel="noopener nofollow">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </a>
+            </div>
+
+            <div class="icons-footer5" style="margin-left: 10px;">
+                <a href="https://www.youtube.com/channel/UCVoaS_v6vbnuKLuMq4jLYSw" target="_blank" data-label="Youtube" aria-label="Follow on Youtube" rel="noopener nofollow">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <h5 style="border-bottom: 4px solid gray; text-align: center;">HỖ TRỢ KHÁCH HÀNG</h5>
+
+        <ul style="padding: 0; font-size: 18px;">
+            <li style="margin-bottom: 10px;"><a rel="privacy-policy" href="#">Điều khoản &amp; chính sách bảo mật</a></li>
+            <li style="margin-bottom: 10px;"><a href="#">Điều kiện giao dịch chung</a></li>
+            <li style="margin-bottom: 10px;"><a href="#">Vận chuyển &amp; Giao nhận</a></li>
+            <li style="margin-bottom: 10px;"><a href="#">Chính sách bảo hành &amp; đổi trả</a></li>
+            <li style="margin-bottom: 10px;"><a href="#">Tiếp nhận &amp; giải quyết khiếu nại</a></li>
+            <li style="margin-bottom: 10px;"><a href="#">Cam kết chất lượng</a></li>
+            <li style="margin-bottom: 10px;"><a href="#">Hướng dẫn mua hàng</a></li>
+            <li style="margin-bottom: 10px;"><a href="#">Bán buôn – bán sỉ</a></li>
+            <li style="margin-bottom: 10px;"><a href="#">Tài khoản thanh toán</a></li>
+            <li style="margin-bottom: 10px;"><a href="#">Sản phẩm khuyến mãi</a></li>
+            <li style="margin-bottom: 10px;"><a href="#">Câu hỏi thường gặp</a></li>
+            <li style="margin-bottom: 10px;"><a href="#">Chỉ đường đến shop</a></li>
+        </ul>
+    </div>
+
+    <div class="col-sm-4">
+        <h5 style="border-bottom: 4px solid gray; text-align: center;">BÀI VIẾT MỚI</h5>
+
+        <ul style="padding: 0; font-size: 15px;">
+            <li>
+                <div class="row">
+                    <div class="col-sm-20 row">
+                        <div class="col-sm-2">
+                            <a href="#">
+                                <img src="/image/nhan-biet-cac-bieu-hien-tho-sap-chet-150x150.webp" alt="" style="width: 65px; height: 65px;">
+                            </a>
+                        </div>
+
+                        <div class="col-sm-10">
+                            <a href="#">
+                                        20 dấu hiệu thỏ sắp chết – Nhận biết biểu hiện &amp; cách xử lý!
+                                    </a>
+                            <br>
+                            <span>
+                                        <a href="#"><strong>2</strong> Comments</a>
+                                    </span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-20 row" style="margin-top: 30px;">
+                        <div class="col-sm-2">
+                            <a href="#">
+                                <img src="/image/nhung-loai-thuc-pham-gay-nguy-hiem-cho-meo-150x150.webp" alt="" style="width: 65px; height: 65px;">
+                            </a>
+                        </div>
+
+                        <div class="col-sm-10">
+                            <a href="#">
+                                        13 loại thực phẩm nguy hiểm cho chó – không để chó ăn phải!
+                                    </a>
+                            <br>
+                            <span>
+                                        <a href="#"><strong>10</strong> Comments</a>
+                                    </span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-20 row" style="margin-top: 30px;">
+                        <div class="col-sm-2">
+                            <a href="#">
+                                <img src="/image/top-cac-loai-thuc-pham-nguy-hiem-cho-cho-150x150.webp" alt="" style="width: 65px; height: 65px;">
+                            </a>
+                        </div>
+
+                        <div class="col-sm-10">
+                            <a href="#">
+                                        13 loại thực phẩm nguy hiểm cho mèo – cần lưu ý tránh xa
+                                    </a>
+                            <br>
+                            <span>
+                                        <a href="#"><strong>6</strong> Comments</a>
+                                    </span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-20 row" style="margin-top: 30px;">
+                        <div class="col-sm-2">
+                            <a href="#">
+                                <img src="/image/ba-cho-la-gi-150x150.webp" alt="" style="width: 65px; height: 65px;">
+                            </a>
+                        </div>
+
+                        <div class="col-sm-10">
+                            <a href="#">   
+                                        Bả chó là gì? Tác hại và cách chữa trị khi trúng bả chó
+                                    </a>
+                            <br>
+                            <span>
+                                        <a href="#"><strong>21</strong> Comments</a>
+                                    </span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-20 row" style="margin-top: 30px;">
+                        <div class="col-sm-2">
+                            <a href="#">
+                                <img src="/image/tai-sao-meo-keu-vao-ban-dem-1-150x150.webp" alt="" style="width: 65px; height: 65px;">
+                            </a>
+                        </div>
+
+                        <div class="col-sm-10">
+                            <a href="#">
+                                        Tại sao mèo kêu vào ban đêm? 7 nguyên nhân &amp; cách trị mèo kêu gào ban đêm
+                                    </a>
+                            <br>
+                            <span>
+                                        <a href="#"><strong>1</strong> Comments</a>
+                                    </span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

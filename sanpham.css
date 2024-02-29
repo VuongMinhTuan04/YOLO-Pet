@@ -1,0 +1,198 @@
+#page {
+    margin-bottom: 100px;
+    margin-top: 10px;
+    background-color: white;
+    margin-left: 280px;
+}
+
+head {
+    position: relative;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/*Menu*/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.imageLogo {
+    width: 250px;
+    height: 79.89px;
+    padding: 3px 0px 3px 0px;
+}
+
+.imageFooter {
+    display: flex;
+}
+
+.imageFooter img {
+    width: 100%;
+}
+
+.imgDMCA {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+img {
+    display: block;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.input-header {
+    width: 558px;
+    border-style: outset;
+}
+
+.searchMain {
+    width: 550px;
+    height: 33.06px;
+    position: absolute;
+}
+
+.searchHeader {
+    padding: 25px 0px 0px 20px;
+}
+
+.shopping {
+    padding: 26px 0px 0px 0px;
+}
+
+nav {
+    display: block;
+    margin-left: 70px;
+    position: absolute;
+    padding: 3px 0px 3px 0px;
+    background-color: black;
+}
+
+.find {
+    background-color: gray;
+    height: 32px;
+    width: 36px;
+    margin-top: 0.5px;
+    left: 1046px;
+    border: none;
+    z-index: 1;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-item {
+    font-size: 17px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+.nav-item:hover {
+    background-color: darkgrey;
+}
+
+.dropdown-menu {
+    border-radius: 10%;
+}
+
+.dropdown-menu a:hover {
+    /* background-color: rgb(105, 216, 105); */
+    background-color: darkgrey;
+}
+
+#menu-con ul {
+    width: 500px;
+}
+
+#menu-con li {
+    list-style: none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+
+/*Body*/
+
+.danh-muc-san-pham {
+    padding: 0px;
+}
+
+.danh-muc-san-pham a {
+    font-size: 18px;
+    color: gray;
+}
+
+.danh-muc-san-pham a:hover {
+    color: rgb(48, 48, 206);
+}
+
+.card-san-pham {
+    box-shadow: 5px 7px #dcd7d7;
+    text-align: center;
+    border: none;
+    border-radius: 10%;
+    font-size: 15px;
+    transition: all 0.3s;
+    height: 100%;
+    max-width: 100%;
+}
+
+.card-body {
+    border: none;
+}
+
+.card-footer {
+    text-align: center;
+    border: none;
+}
+
+.card-header {
+    overflow: hidden;
+    border: none;
+}
+
+.card-san-pham img {
+    display: flex;
+    display: block;
+    width: 100%;
+    height: 260.93px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+.card-san-pham:hover {
+    transform: scale(1.015);
+    box-shadow: 0 7px 80px 10px #aaaddaaa;
+    filter: brightness(1.05);
+     ::before {
+        filter: brightness(.5);
+        top: -100%;
+        left: 200%;
+    }
+}
+
+.card-san-pham h6:hover {
+    color: rgb(48, 48, 206);
+}
+
+.Breadcrumb {
+    background-color: #446084;
+    width: 100%;
+    font-size: 17px;
+    margin-left: 45px;
+}

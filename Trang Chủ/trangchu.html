@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/image/yolo-icon.svg" type="image/x-icon">
+
+    <!-- Website name -->
+    <title>YOLO Pet Shop - Trang Chủ</title>
+
+    <!-- Bootstrap CSS -->
+    <script src="/angular-1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/angular-1.8.2/angular-route.js"></script>
+
+    <!-- Trang chủ CSS -->
+    <link rel="stylesheet" href="trangchu.css">
+
+    <!-- Icon -->
+    <script src="https://kit.fontawesome.com/8062880e27.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container" ng-controller="myCtrl">
+
+        <!-- Head -->
+        <div ng-include="'Header.html'"></div>
+
+        <!-- Menu -->
+        <div ng-include="'Menu.html'"></div>
+
+        <!-- Body -->
+        <div ng-include="'Body.html'"></div>
+
+        <!-- Footer -->
+        <div ng-include="'Footer.html'"></div>
+    </div>
+</body>
+
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope, $interval) {
+        $scope.currentIndex = 0;
+        $scope.slides = [{
+            image: '/image/Banner1.webp'
+        }, {
+            image: '/image/Banner2.webp'
+        }, {
+            image: '/image/Banner3.webp'
+        }];
+
+        $scope.nextSlide = function() {
+            $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
+        };
+
+        $scope.prevSlide = function() {
+            $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
+        };
+
+        $interval(function() {
+            $scope.nextSlide();
+        }, 2000);
+    });
+
+    // app.config(function($routeProvider) {
+    //     $routeProvider
+    //         .when("/home", {
+    //             templateUrl: "/Trang Chủ/trangchu.html"
+    //         })
+    //         .when("/banmeo", {
+    //             templateUrl: "/banmeo.html"
+    //         })
+    //         .otherwise({
+    //             redirectTo: "/home"
+    //         })
+    // });
+
+    // app.run(function($rootScope) {
+    //     $rootScope.$on('$routeChangeStart', function() {
+    //         $rootScope.loading = true;
+    //     })
+    //     $rootScope.$on('$routeChangeSuccess', function() {
+    //         $rootScope.loading = false;
+    //     })
+    //     $rootScope.$on('$routeChangeError', function() {
+    //         $rootScope.loading = false;
+    //         alert("Lỗi!");
+    //     })
+    // });
+</script>
+
+</html>

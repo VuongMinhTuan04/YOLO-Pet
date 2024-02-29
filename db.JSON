@@ -1,0 +1,14 @@
+[
+    { "id": 1, "image": "Mèo anh lông ngắn - Xám xanh - ALN1574.jpg", "name": "Mèo Anh Lông Ngắn Xám Xanh", "price": 6000000 },
+    { "id": 2, "image": "Mèo anh lông ngắn Bicinamon - ALN1569.jpg", "name": "Mèo Anh Lông Ngắn Bicinamon", "price": 9600000 },
+    { "id": 3, "image": "Mèo ba tư kem - HML850.jpg", "name": "Mèo Ba Tư Kem", "price": 24000000 },
+    { "id": 4, "image": "Mèo ba tư xám - BT685.jpg", "name": "Mèo Ba Tư Xám", "price": 18500000 },
+    { "id": 5, "image": "Mèo Bengal - BG1253.jpg", "name": "Mèo Bengal", "price": 11000000 },
+    { "id": 6, "image": "Mèo Bengal Sliver - BG146.jpg", "name": "Mèo Bengal Sliver", "price": 17000000 },
+    { "id": 7, "image": "Mèo Anh lông ngắn tai cụp - ALN1267.jpg", "name": "Mèo Anh Lông Ngắn Tai Cụp", "price": 22000000 },
+    { "id": 8, "image": "Mèo Anh lông ngắn tai cụp - ALN837.jpg", "name": "Mèo Anh Lông Ngắn Tai Cụp", "price": 21600000 },
+    { "id": 9, "image": "Mèo Ragdoll kem - RD845.jpg", "name": "Mèo Ragdoll kem", "price": 22210000 },
+    { "id": 10, "image": "Mèo Ragdoll Lilac - RD842.jpg", "name": "Mèo Ragdoll Lilac", "price": 27400000 },
+    { "id": 11, "image": "Mèo Sphynx hồng - SPH1257.jpg", "name": "Mèo Sphynx hồng", "price": 13800000 },
+    { "id": 12, "image": "Mèo Sphynx hồng trắng - SPH792.jpg", "name": "Mèo Sphynx hồng trắng", "price": 19000000 }
+]
