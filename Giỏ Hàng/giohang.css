@@ -1,0 +1,162 @@
+head {
+    position: relative;
+}
+
+
+/*Menu*/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.imageLogo {
+    width: 250px;
+    height: 79.89px;
+    padding: 3px 0px 3px 0px;
+}
+
+.imageFooter {
+    display: flex;
+}
+
+.imageFooter img {
+    width: 100%;
+}
+
+.imgDMCA {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+img {
+    display: block;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.input-body {
+    width: 620px;
+    margin-left: 140px;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px grey;
+}
+
+.searchMain {
+    width: 550px;
+    height: 33.06px;
+    position: absolute;
+}
+
+.searchHeader {
+    padding: 25px 0px 0px 20px;
+}
+
+.shopping {
+    padding: 26px 0px 0px 0px;
+}
+
+nav {
+    display: block;
+    margin-left: 70px;
+    position: absolute;
+    padding: 3px 0px 3px 0px;
+}
+
+th {
+    font-size: 17px;
+}
+
+.find {
+    background-color: gray;
+    height: 32px;
+    width: 36px;
+    margin-top: 0.5px;
+    left: 1046px;
+    border: none;
+    z-index: 1;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-item {
+    font-size: 17px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+.nav-item:hover {
+    background-color: darkgrey;
+}
+
+.dropdown-menu {
+    border-radius: 10%;
+}
+
+.dropdown-menu a:hover {
+    /* background-color: rgb(105, 216, 105); */
+    background-color: darkgrey;
+}
+
+#menu-con ul {
+    width: 500px;
+}
+
+#menu-con li {
+    list-style: none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+
+/*Body*/
+
+table img {
+    text-align: center;
+    display: flex;
+    /* margin-left: 20px; */
+    width: 80px;
+    height: 100%;
+    display: block;
+}
+
+#tong_don_hang {
+    text-align: right;
+    font-weight: bold;
+}
+
+#tam-tinh {
+    text-align: right;
+    font-weight: bold;
+}
+
+#giam-gia {
+    text-align: right;
+    font-weight: bold;
+}
+
+#cong-gio-hang {
+    border-left: 5px solid #ececec;
+}
+
+#cong-gio-hang button {
+    font-weight: bold;
+}
+
+#page {
+    margin-bottom: 100px;
+    margin-top: 10px;
+    background-color: white;
+    margin-left: 280px;
+}

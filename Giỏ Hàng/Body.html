@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<div class="container" style="margin-top: 30px" ng-controller="myCtrl">
+    <input type="text" class="input-body form-control" placeholder="Tìm thú cưng trong giỏ hàng!" aria-label="Recipient's username" aria-describedby="button-addon2" ng-model="searchText.name">
+    <div class="row">
+
+        <div class="col-sm-20 row">
+            <div class="col-sm-8">
+
+                <table class="table table-hover">
+                    <thead class="table-light" style="text-align: center">
+                        <tr>
+                            <th scope="col" style="padding-bottom: 22px; width: 500px">
+                                <a href="#" ng-click="sortBy('name')">Sản Phẩm</a>
+                            </th>
+                            <th scope="col" style="padding-bottom: 22px; width: 200px">
+                                <a href="#" ng-click="sortBy('price')">Giá</a>
+                            </th>
+                            <th scope="col" style="padding-bottom: 22px; width: 90px">
+                                <a href="#" ng-click="sortBy('amount')">Số Lượng</a>
+                            </th>
+                            <th scope="col" style="padding-bottom: 22px; width: 250px">
+                                <a href="#">Tạm Tính</a>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="gio_hang" style="font-weight: bold">
+                        <tr ng-repeat="ls in list | filter: searchText | orderBy: prop | limitTo:4:begin">
+                            <td>
+                                <div class="col-sm-20 row">
+                                    <div class="col-sm-2" style="margin-top: 30px; text-align: center">
+                                        <button type="button" class="btn btn-danger" ng-click="xoa(ls.id)">Xóa</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img src="/image/{{ls.img}}" alt="" />
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <p ng-bind="ls.name" style="margin-top: 20px"></p>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <p ng-bind="ls.price | currency:'':0" style="text-align: center; margin-top: 31px; font-size: 18px;"></p>
+                            </td>
+
+                            <td>
+                                <input type="number" min="0" max="10" class="form-control" ng-model="ls.amount" style="text-align: center; margin-top: 28px; font-size: 15px;" />
+                            </td>
+
+                            <td>
+                                <p ng-bind="ls.price*ls.amount | currency: '':0" style="margin-top: 31px;font-size: 18px; text-align: center;"></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-sm-4" id="cong-gio-hang">
+                <table class="table" ng-show="discount.length > 0">
+                    <thead style="font-weight: bold">
+                        <tr>
+                            <th scope="col">Cộng giỏ hàng</th>
+                            <th scope="col" style="text-align: right">Giá</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row " style="color: gray">Tạm tính</th>
+                            <td id="tam-tinh">{{tong_tien() | currency:'':0}}<span> ₫</span></td>
+                        </tr>
+                        <tr ng-repeat="ds in discount">
+                            <th scope="row " style="color: gray">Giảm giá</th>
+                            <td id="giam-gia">{{ds.discount|percentage:0}}</td>
+                        </tr>
+                        <tr ng-repeat="ds in discount">
+                            <th scope="row " style="color: gray">Tổng</th>
+                            <td id="tong_don_hang">{{(tong_tien() * (1 - discountValue)) | currency:'':0}}<span> ₫</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 100%">
+                        TIẾN HÀNH THANH TOÁN
+                </button>
+
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">THÔNG TIN THANH TOÁN</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <form name="frmThanhToan">
+                                        <div class="col-sm-20 row">
+                                            <div class="col-sm-6">
+                                                <label for="exampleFormControlInput1 " class="form-label">Tên*</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput1" ng-pattern="/^[a-zA-Z]+$/" ng-model="Name" name="name" autofocus required/>
+                                                <div ng-show="frmThanhToan.name.$invalid && frmThanhToan.name.$touched">
+                                                    <span style="color: red;" ng-show="frmThanhToan.name.$error.pattern && !frmThanhToan.name.$error.required">Không được nhập số vào tên!</span>
+                                                    <span style="color: red;" ng-show="frmThanhToan.name.$error.required">Không được để trống tên!</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="exampleFormControlInput1 " class="form-label">Họ</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput2" />
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="exampleFormControlInput1 " class="form-label">Địa Chỉ*</label>
+                                                <input type="text" class="form-control" ng-pattern="/^[a-zA-Z0-9\s\.,\/#-]+$/" ng-model="Location" name="location" required/>
+                                                <div ng-show="frmThanhToan.location.$invalid && frmThanhToan.location.$touched">
+                                                    <span style="color: red;" ng-show="frmThanhToan.location.$error.pattern && !frmThanhToan.location.$error.required">Không được nhập sai định dạng!</span>
+                                                    <span style="color: red;" ng-show="frmThanhToan.location.$error.required">Không được để trống địa chỉ!</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="exampleFormControlInput1 " class="form-label">Quốc Gia/ Khu Vực</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Việt Nam</option>
+                                                    <option value="1 ">Mỹ</option>
+                                                    <option value="2 ">Canada</option>
+                                                    <option value="3 ">Pháp</option>
+                                                    <option value="4 ">Anh</option>
+                                                    <option value="5 ">Nga</option>
+                                                    <option value="6 ">Nhật Bản</option>
+                                                    <option value="7 ">Hàn Quốc</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="exampleFormControlInput1 " class="form-label">Số Điện Thoại*</label>
+                                                <input type="number" class="form-control" ng-model="Phone" name="phone" ng-pattern="/^\d{10,11}$/" required/>
+                                                <div ng-show="frmThanhToan.phone.$invalid && frmThanhToan.phone.$touched">
+                                                    <span style="color: red;" ng-show="frmThanhToan.phone.$error.pattern && !frmThanhToan.phone.$error.required">Không được nhập số điện thoại hơn 12 ký tự!</span>
+                                                    <span style="color: red;" ng-show="frmThanhToan.phone.$error.required">Không được để trống số điện thoại!</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="floatingInput ">Địa Chỉ Email*</label>
+                                                <input type="text" class="form-control" name="email" placeholder="...@gmail.com" ng-model="Email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/" required/>
+                                                <div ng-show="frmThanhToan.email.$invalid && frmThanhToan.email.$touched">
+                                                    <span style="color: red;" ng-show="frmThanhToan.email.$error.pattern && !frmThanhToan.email.$error.required">Hãy nhập đúng định dạng email!</span>
+                                                    <span style="color: red;" ng-show="frmThanhToan.email.$error.required">Không được để trống Email!</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6" style="width: 100%">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Ghi Chú</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" id="dat_mua">Đặt Hàng</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form name="frmCoupon">
+                    <table class="table" style="margin-top: 30px">
+                        <thead style="font-weight: bold">
+                            <tr>
+                                <th scope="col ">
+                                    <i class="fa-solid fa-ticket"></i> Phiếu ưu đãi
+                                </th>
+                                <th scope="col " style="text-align: right"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <input type="text" name="txtCoupon" id="textCoupon" class="form-control" ng-pattern="/^[a-zA-Z]{3}\d{2}$/" placeholder="Mã ưu đãi" aria-label="Coupon" aria-describedby="basic-addon1" ng-model="couponCode" />
+                                    <div ng-show="frmCoupon.txtCoupon.$invalid && frmCoupon.txtCoupon.$touched">
+                                        <span style="color: red;" ng-show="frmCoupon.txtCoupon.$error.pattern">Không đúng mã ưu đãi!</span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-success" style="width: 100%" ng-click="applyCoupon()">Áp dụng</button>
+                    <button type="button" class="btn btn-danger" style="width: 100%;margin-top: 10px;" ng-click="cancelCoupon()">Hủy áp dụng</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="page">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#" ng-click="first()"><i class="fa-solid fa-backward-fast"></i></a></li>
+                <li class="page-item"><a class="page-link" href="#" ng-click="prev()"><i class="fa-solid fa-backward"></i></a></li>
+                <li class="page-item"><a class="page-link" href="#" ng-click="next()"><i class="fa-solid fa-forward"></i></a></li>
+                <li class="page-item"><a class="page-link" href="#" ng-click="last()"><i class="fa-solid fa-forward-fast"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

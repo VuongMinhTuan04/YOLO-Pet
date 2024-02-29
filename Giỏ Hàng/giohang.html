@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/image/yolo-icon.svg" type="image/x-icon" />
+
+    <!-- Website name -->
+    <title>YOLO Pet Shop - Trang Chủ</title>
+
+    <!-- Bootstrap CSS -->
+    <script src="/angular-1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Trang chủ CSS -->
+    <link rel="stylesheet" href="giohang.css" />
+
+    <!-- Icon -->
+    <script src="https://kit.fontawesome.com/8062880e27.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container" ng-controller="myCtrl">
+        <!-- Head -->
+        <div ng-include="'Header.html'"></div>
+
+        <!-- Menu -->
+        <div ng-include="'Menu.html'"></div>
+
+        <!-- Body -->
+        <div ng-include="'Body.html'"></div>
+
+        <!-- Footer -->
+        <div ng-include="'Footer.html'"></div>
+    </div>
+</body>
+
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+        $scope.list = [{
+            id: 1,
+            img: "Mèo Anh lông ngắn tai cụp - ALN1267.jpg",
+            name: "Mèo Anh lông ngắn tai cụp - ALN1267",
+            price: 22000000,
+            amount: 2,
+        }, {
+            id: 2,
+            img: "Mèo anh lông ngắn - Xám xanh - ALN1574.jpg",
+            name: "Mèo anh lông ngắn - Xám xanh - ALN1574",
+            price: 6000000,
+            amount: 3,
+        }, {
+            id: 3,
+            img: "Mèo anh lông ngắn Bicinamon - ALN1569.jpg",
+            name: "Mèo anh lông ngắn Bicinamon - ALN1569",
+            price: 9600000,
+            amount: 4,
+        }, {
+            id: 4,
+            img: "Mèo ba tư kem - HML850.jpg",
+            name: "Mèo ba tư kem - HML850",
+            price: 24000000,
+            amount: 1,
+        }, {
+            id: 5,
+            img: "Mèo ba tư xám - BT685.jpg",
+            name: "Mèo ba tư xám - BT685",
+            price: 18500000,
+            amount: 4,
+        }, {
+            id: 6,
+            img: "Mèo Bengal - BG1253.jpg",
+            name: "Mèo Bengal - BG1253",
+            price: 11000000,
+            amount: 2,
+        }, {
+            id: 7,
+            img: "Mèo Bengal Sliver - BG146.jpg",
+            name: "Mèo Bengal Sliver - BG146",
+            price: 17000000,
+            amount: 4,
+        }, {
+            id: 8,
+            img: "Mèo Ragdoll Lilac - RD842.jpg",
+            name: "Mèo Ragdoll Lilac - RD842",
+            price: 27400000,
+            amount: 4,
+        }, {
+            id: 9,
+            img: "Mèo Sphynx hồng - SPH1257.jpg",
+            name: "Mèo Sphynx hồng - SPH1257",
+            price: 13800000,
+            amount: 4,
+        }, {
+            id: 10,
+            img: "Mèo Sphynx hồng trắng - SPH792.jpg",
+            name: "Mèo Sphynx hồng trắng - SPH792",
+            price: 19000000,
+            amount: 4,
+        }, ];
+
+        $scope.discount = [{
+            discount: 0
+        }];
+
+        $scope.tong_tien = function() {
+            var quantity = 0;
+            for (var i = 0; i < $scope.list.length; i++) {
+                quantity += $scope.list[i].price * $scope.list[i].amount;
+            }
+            return quantity;
+        };
+
+        $scope.xoa = function(id) {
+            var index = 0;
+            for (let i = 0; i < $scope.list.length; i++) {
+                if ($scope.list[i].id == id) {
+                    index = i;
+                    break;
+                }
+            }
+            $scope.list.splice(index, 1);
+        };
+
+        $scope.prop = "name";
+        $scope.sortBy = function(prop) {
+            $scope.prop = prop;
+        }
+
+        $scope.begin = 0;
+        $scope.pageCount = Math.ceil($scope.list.length / 4);
+        $scope.first = function() {
+            $scope.begin = 0;
+        }
+        $scope.prev = function() {
+            if ($scope.begin > 0) $scope.begin -= 4;
+        }
+        $scope.next = function() {
+            if ($scope.begin < ($scope.pageCount - 1) * 4) $scope.begin += 4;
+        }
+        $scope.last = function() {
+            $scope.begin = ($scope.pageCount - 1) * 4;
+        }
+
+        /*Coupon*/
+        $scope.discountValues = {
+            "NEW01": 0.1,
+            "NEW02": 0.2,
+            "NEW03": 0.3,
+            "NEW04": 0.4
+        };
+        $scope.discountValue = 0;
+        $scope.appliedDiscounts = {};
+
+        $scope.applyCoupon = function() {
+            if ($scope.frmCoupon.$valid) {
+                if ($scope.couponCode in $scope.discountValues) {
+                    if (!$scope.appliedDiscounts[$scope.couponCode]) {
+                        $scope.appliedDiscounts[$scope.couponCode] = true;
+                        $scope.appliedDiscounts[$scope.couponCode] = $scope.discountValues[$scope.couponCode];
+                        $scope.discountValue = Object.values($scope.appliedDiscounts).reduce((acc, val) => acc + val, 0);
+                        $scope.discount = [{
+                            discount: $scope.discountValue
+                        }];
+                        alert("Bạn đã áp dụng mã ưu đãi!");
+                    } else {
+                        alert("Bạn đã áp dụng mã ưu đãi này trước đó!");
+                    }
+                } else {
+                    alert("Mã ưu đãi không đúng!");
+                    // Reset discount and discountValue
+                    $scope.appliedDiscounts = {};
+                    $scope.discountValue = 0;
+                    $scope.discount = [{
+                        discount: 0
+                    }];
+                }
+                // Reset the couponCode
+                $scope.couponCode = '';
+            }
+
+        };
+
+        $scope.cancelCoupon = function() {
+            $scope.discount = [{
+                discount: 0
+            }];
+            $scope.discountValue = 0;
+            $scope.appliedDiscounts = {};
+            alert("Đã hủy áp dụng ưu đãi!");
+        }
+    });
+
+    app.filter('percentage', function($filter) {
+        return function(input, decimals) {
+            return $filter('number')(input * 100, decimals) + '%';
+        }
+    });
+</script>
+
+</html>

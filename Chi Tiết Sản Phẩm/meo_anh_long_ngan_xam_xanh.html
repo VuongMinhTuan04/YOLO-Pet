@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/image/yolo-icon.svg" type="image/x-icon">
+
+    <!-- Website name -->
+    <title>YOLO Pet Shop - Mèo anh lông ngắn - Xám xanh - ALN1574</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/angular-1.8.2/angular.min.js"></script>
+
+    <!-- Trang chủ CSS -->
+    <link rel="stylesheet" href="chi_tiet.css">
+
+    <!-- Icon -->
+    <script src="https://kit.fontawesome.com/8062880e27.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-app="myApp">
+    <section class="header">
+        <div class="container">
+            <header class="row">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="/image/Logo.png" class="imageLogo" />
+                    </div>
+
+                    <div class="col-7 searchHeader">
+                        <div class="input-group mb-3">
+                            <h2 style="margin-left: 9px; font-size: 22px;">THÔNG TIN MUA BÉ MÈO ANH LÔNG NGẮN - XÁM XANH - ALN1574</h2>
+                        </div>
+                    </div>
+
+                    <div class="col shopping" style="font-size: 18px; margin-left: 30px;margin-top: 3px;">
+                        <a href="/Giỏ Hàng/giohang.html">
+                            <span>GIỎ HÀNG / </span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </section>
+
+    <section class="menu">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-light" style="text-align: center; align-items: center;">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse menu-main" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <img src="https://go.yolo.vn/wp-content/uploads/2022/03/yolo-icon.svg" alt="yolo icon" width="25px" height="25px" style="margin-top: 8px;">
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/Trang Chủ/trangchu.html" style="color: #446084!important;">
+                                    <strong>TRANG CHỦ YOLO</strong>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <strong>SHOP CHO MÈO</strong>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/banmeo.html"><i class="fa-solid fa-cat"></i> Bán Mèo <span class="badge text-bg-danger">HOT</span></a></li>
+                                    <li><a class="dropdown-item" href="#">Thức Ăn Cho Mèo</a></li>
+                                    <li><a class="dropdown-item" href="#">Dụng Cụ Ăn Uống Cho Mèo</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Cát Vệ Sinh Cho Mèo</a></li>
+                                    <li><a class="dropdown-item" href="#">Chuồng Cho Mèo</a></li>
+                                    <li><a class="dropdown-item" href="#">Thuốc Tẩy Giun Sán Cho Mèo</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <strong>SHOP CHO CHÓ</strong>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Bán Chó <span class="badge text-bg-danger">HOT</span></a></li>
+                                    <li><a class="dropdown-item" href="#">Thức Ăn Cho Chó</a></li>
+                                    <li><a class="dropdown-item" href="#">Thuốc Tẩy Giun Sán Cho Chó</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <strong>QUẦN ÁO CHO MÈO</strong>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Áo</a></li>
+                                    <li><a class="dropdown-item" href="#">Quần</a></li>
+                                    <li><a class="dropdown-item" href="#">Váy Đầm</a></li>
+                                    <li><a class="dropdown-item" href="#">Giày Dép</a></li>
+                                    <li><a class="dropdown-item" href="#">Mắt Kính</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <strong>VẬT NUÔI KHÁC</strong>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Sóc Bay Úc Baby</a></li>
+                                    <li><a class="dropdown-item" href="#">Sóc Bay Úc Mặt Trắng</a></li>
+                                    <li><a class="dropdown-item" href="#">Sóc Bay Úc Mosaic</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <strong>DỊCH VỤ</strong>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Cho Thuê Lòng Vận Chuyển</a></li>
+                                    <li><a class="dropdown-item" href="#">Trông Giữ Chó Mèo Thú Cưng</a></li>
+                                    <li><a class="dropdown-item" href="#">Dịch Vụ Hỏa Tán Thú Cưng, Chó Mèo</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <strong><i class="fa-solid fa-user"></i> TÀI KHOẢN</strong>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/Đăng Nhập & Đăng Ký/dangnhap.html"><i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen-to-square"></i> Đăng Ký</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-key"></i> Đổi Mật Khẩu</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Đăng Xuất</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section class="Breadcrumb">
+        <div class="container">
+            <div class="col-9 row">
+                <nav style="--bs-breadcrumb-divider: '>'; background-color: white" aria-label=" breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Trang Chủ/trangchu.html" style="color:darkslateblue; font-weight: bold;">TRANG CHỦ YOLO</a></li>
+                        <li class="breadcrumb-item" style="color:darkslateblue; font-weight: bold;">SHOP CHO MÈO</li>
+                        <li class="breadcrumb-item"><a href="/banmeo.html" style="color:darkslateblue; font-weight: bold;">BÁN MÈO</a></li>
+                        <li class="breadcrumb-item" aria-current="page" style="font-weight: bold;">Mèo anh lông ngắn - Xám xanh - ALN1574</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <section class="body" style="margin-top: 80px;" ng-controller="myCtrl">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-15 row">
+                        <div class="col-sm-5">
+                            <img src="/image/Mèo anh lông ngắn - Xám xanh - ALN1574.jpg" class="col-sm-4" style="width: 500px;border-radius: 2%; margin-left: 10px;">
+                        </div>
+
+                        <div class="col-sm-7">
+                            <ul style="padding: 0px 0px 0px 0px;">
+                                <li style="font-size: 32px; border-bottom: 3px solid rgba(0,0,0,.1);  font-weight: bold;">Mèo anh lông ngắn - Xám xanh - ALN1574</li>
+                                <li style="padding-top: 15px; text-align: left;">
+                                    <div class="col-10 row">
+                                        <div class="col-4" style="padding-right: 0px; width: 190px;">
+                                            <div class="rating">
+                                                <input type="radio" id="star5" name="rating" value="5">
+                                                <label for="star5"></label>
+                                                <input type="radio" id="star4" name="rating" value="4">
+                                                <label for="star4"></label>
+                                                <input type="radio" id="star3" name="rating" value="3">
+                                                <label for="star3"></label>
+                                                <input type="radio" id="star2" name="rating" value="2">
+                                                <label for="star2"></label>
+                                                <input type="radio" id="star1" name="rating" value="1">
+                                                <label for="star1"></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-5" style="margin-top: 16px; padding-left: 0px;">
+                                            <a href="">(<span id="comments">0</span> đánh giá của khách hàng)</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="padding-top: 15px; font-weight: bold; font-size: 30px;">6.000.000₫</li>
+                                <li style="padding-top: 15px;">
+                                    <table class="table table-bordered" style="border: 3px solid grey; font-size: 18px;">
+                                        <tbody>
+                                            <tr>
+                                                <td>Tháng tuổi: 2 tháng tuổi</td>
+                                                <td>Bố: Ô long</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Giới tính: Đực</td>
+                                                <td>Mẹ: Lựu</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Màu: Xám xanh</td>
+                                                <td>Sức khỏe: Nhanh nhẹn, ăn uống tốt</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tình trạng: Có sẵn</td>
+                                                <td>Vận chuyển: Miễn phí</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tẩy giun: 1 lần</td>
+                                                <td>Tiêm phòng: 1 mũi vacxin</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nguồn gốc: Thuần chủng, sinh sản tại Trại Pethouse</td>
+                                                <td>Đặc điểm: Mặt bánh bao</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li style="padding-top: 0px; padding-left: 0px;">
+                                    <div class="row">
+                                        <div class="col-sm-8 row">
+                                            <div class="col-sm-4" style="width: 100px; margin-top: 8px;">
+                                                <input type="number" placeholder="0" min="0" max="10" class="form-control" ng-model="amount" ng-change="checkAmount()" />
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 150px; height: 50px;" ng-disabled="!amount || amount < 1 || amount > 10">Đặt Mua</button>
+                                            </div>
+
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Mua Hàng</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body" style="height: 100px; text-align: center;">
+                                                            <h4>Mua hàng thành công!</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row col-sm-5" style="margin-left: 10px;">
+                    <div class="row" style="padding: 0;">
+                        <legend style="text-align: center;">Hàng Liên Quan</legend>
+                        <div class="col-2"><img src="/image/Mèo anh lông ngắn Bicinamon - ALN1569.jpg" class="img-thumbnail img-fluid"></div>
+                        <div class="col-2"><img src="/image/Mèo Anh lông ngắn tai cụp - ALN1267.jpg" class="img-thumbnail img-fluid"></div>
+                        <div class="col-2"><img src="/image/Mèo Anh lông ngắn tai cụp - ALN837.jpg" class="img-thumbnail img-fluid"></div>
+                        <div class="col-2"><img src="/image/Mèo ba tư kem - HML850.jpg" class="img-thumbnail img-fluid"></div>
+                        <div class="col-2"><img src="/image/Mèo ba tư xám - BT685.jpg" class="img-thumbnail img-fluid"></div>
+                        <div class="col-2"><img src="/image/Mèo Bengal - BG1253.jpg" class="img-thumbnail img-fluid"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="accordion" style="margin-top: 20px;">
+        <div class="container">
+            <div class="accordion accordion-flush" id="accordionFlushExample" style="font-size: 18px;">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <strong>Mô Tả</strong>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                <strong>Mèo Anh lông ngắn xám xanh - ALN1574</strong>sở hữu gương mặt siêu cưng xỉu khi có đôi má bánh bao phúng phính khiến rất nhiều sen mê mẩn đó ạ. Với sức khỏe đảm bảo, ngoại hình chuẩn form đây ắt hẳn sẽ là một siêu
+                                phẩm đó ạ
+                            </p>
+                            <p>
+                                Mèo Anh lông ngắn là một giống mèo hiền lành, dễ nuôi nên đây sẽ là lựa chọn tuyệt vời đó ạ. Để tham khảo thêm về các bé mèo tại Pet House, quý khách vui lòng kết bạn Zalo hoặc gọi Hotline: 035.956.7792 để được tư vấn cụ thể từng bé ạ.
+                            </p>
+                            <p style="text-align: center;">
+                                Quyền lợi có được khi mua <strong>Mèo Anh lông ngắn xám xanh - ALN1574</strong> tại YOLO Pet Shop
+                            </p>
+                            <p>
+                                1. Bảo hành thuần chủng trọn đời. <br> 2. Bảo hành bệnh giảm bạch cầu trong vòng 7 ngày đầu về nhà mới. <br> 3. Ngoài ra, quý khách có thể mua thêm gói bảo hiểm sức khỏe 1 năm nếu có nhu cầu. (Thú cưng là động vật sống,
+                                nhạy cảm với môi trường sống, thức ăn… bởi vậy hãy chăm sóc theo hướng dẫn của YOLO Pet Shop hướng dẫn nhé) <br> 4. Miễn phí vận chuyển toàn quốc (đối với tàu hỏa và xe khách, taxi) – hỗ trợ 50-80% chi phí vận chuyển máy
+                                bay. <br> 5. Tặng kèm phụ kiện cho thú cưng gồm: Dây dắt, Vòng cổ, Bát ăn, Bình nước thông minh, Đồ chơi, Lược chải, Túi vận chuyển cho thú cảnh nhỏ. <br> 6. Giấy tờ đi kèm: Sổ theo dõi sức khoẻ (sổ tiêm phòng vacxin),
+                                hợp đồng mua bán, hướng dẫn chăm sóc, giấy chứng nhận nguồn gốc của trại cung cấp, thiệp cảm ơn. <br> 7. Giảm giá 10% cho các lần mua thú cưng tiếp theo. <br> 8. Giảm 20% cho các dịch vụ Spa cắt tỉa trọn đời, giảm 10% dịch
+                                vụ trông giữ thú cưng tại cửa hàng. Giảm 5% mua phụ kiện trọn đời. <br> 9. Hỗ trợ bảo hiểm sức khỏe 1.000.000 Vnđ (trong trường hợp thú cưng bị ốm và trong thời gian bảo hành theo điều khoản trong hợp đồng mua bán.) <br>                                10. Tặng quà tặng trị giá 500.000 Vnđ khi giới thiệu bạn bè mua thú cưng tại Pet House. (Có thể quy đổi thành tiền mặt) <br> 11. Nói không với chó mèo tàu bệnh, thải loại. <br> 12. Đồng hành cùng khách hàng chăm sóc thú
+                                cưng trọn đời.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <strong>Đánh Giá (0)</strong>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <strong>Cảm Nhận Khách Hàng Về YOLO Pet Shop</strong>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer ">
+        <div class="container ">
+            <footer class="row" style="margin-top: 30px;">
+                <div class="card" style="border: none;">
+                    <div class="card-footer">
+                        <div class="row" style="margin-left: 50px;">
+                            <div class="col-sm-6 col-md-8">
+                                <p style="margin-bottom: 0px;">2012 - 2024 © YOLO Pet Shop - EVERY Pet Is Special To Us 🐱‍🏍</p>
+                                <p style="margin-bottom: 0px;">
+                                    <a href="https://haku.farm/yolocompany">
+                                        CÔNG TY TNHH YOLO
+                                    </a> – GPKD Số <strong>0359567792</strong> Do Sở Kế Hoạch &amp; Đầu Tư TP Hồ Chí Minh Cấp Ngày 07/09/2020</p>
+                            </div>
+
+                            <div class="col-6 col-md-4 img imageFooter footer-secondary pull-right">
+                                <a href="http://online.gov.vn/Home/WebDetails/74428" rel="nofollow" target="_blank">
+                                    <img src="/image/BoCongThuong.webp">
+                                </a>
+
+                                <a href="http://www.dmca.com/Protection/Status.aspx?ID=3764f4f2-4206-4c17-806c-1d1b606007d9&refurl=https://yolo.vn/" alt="DMCA.com Protection Status">
+                                    <img src="/image/DMCA.png" class="imgDMCA">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+</body>
+
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+        $scope.checkAmount = function() {
+            if (!$scope.amount || $scope.amount < 1 || $scope.amount > 10) {
+                console.log("Số lượng không hợp lệ.");
+            }
+        };
+    });
+</script>
+
+</html>
